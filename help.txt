@@ -1,0 +1,58 @@
+
+
+frontend:
+
+1- install react :
+npx create-react-app my-app
+
+2- 
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init
+3-
+npm i react-router-dom
+
+npm i react-lottie  
+
+npm i react-icons
+
+npm i country-state-city
+
+npm  i  axios
+
+npm i redux-thunk
+
+npm i redux
+
+npm i react-redux
+
+npm i @reduxjs/toolkit
+
+npm install @mui/material @emotion/react @emotion/styled
+
+
+npm install @mui/x-data-grid
+
+npm i lottie-react
+
+bg-gradient-to-r from-rose-400 to-red-500
+
+bg-gradient-to-r from-red-500 to-orange-500 h-[70px]
+
+****************************************************************************
+Backend:
+
+1- npm init
+
+2-
+npm i nodemon
+npm i mongoose
+npm i dotenv
+npm i bcryptjs
+npm i jsonwebtoken
+npm i nodemailer
+npm i cookie-parser
+npm i multer
+
+nodemailer
+
+mongodb://localhost:27017
