@@ -37,8 +37,6 @@ router.post(
 // get all categories
 router.get(
   "/get-categories",
-  isAuthenticated,
-  isAdmin("Admin"),
   async (req, res, next) => {
     try {
       const categories = await Categorie.find();

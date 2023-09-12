@@ -160,7 +160,30 @@ router.get(
 router.get(
   "/logout",
   catchAsyncErrors(async (req, res, next) => {
+    
     try {
+
+const { wishlistItems, id ,cartItems } = req.query;
+let updatedWishlistItems = Array.isArray(wishlistItems) && wishlistItems.length ? wishlistItems : [];
+
+const user = await User.findOneAndUpdate(
+    { _id: id },  // Critère de recherche
+    { wishlistItems: updatedWishlistItems },  // Mise à jour des données
+    { new: true }  // Option pour renvoyer le document mis à jour
+);
+
+
+
+     let updatedCartItems = Array.isArray(cartItems) && cartItems.length ? cartItems : [];
+
+     const us = await User.findOneAndUpdate(
+         { _id: id },  // Critère de recherche
+         { cartItems: updatedCartItems },  // Mise à jour des données
+         { new: true }  // Option pour renvoyer le document mis à jour
+     );
+     
+    
+
       res.cookie("token", null, {
         expires: new Date(Date.now()),
         httpOnly: true,
